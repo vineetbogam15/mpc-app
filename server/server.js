@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
-const authRoutes = require('./routes/userAuth.js');
+const postRoutes = require('./routes/post');
 
-
-app.use('/api/start', authRoutes);
+app.use('/', postRoutes);
 
 app.listen(3000, () => {
     console.log("Server is working");
